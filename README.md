@@ -1,25 +1,42 @@
 # career
 career fields
 
-# Installations
+# Install
+
+npm i career-field
+
+# Usage
+
 //Version: 1.0
 
 import { Career, Field,} from 'career-field';
+console.log( Career.getAllCareers())
+console.log( Field.getAllFields())
 
-# Data
+# Installations
 
-var positionData = {
+# Docs
 
-'PositionName': {
-  
-        'Technology & IT': [
+# Career.getCareerByCode(careerCode)
+
+It accepts a valid CareerCode eg: 'AS' and returns Career Details
+
+type: json | ICareer
+
+'careerName': {
+    
+    'careerCode': 'TIT'
+    'fieldCode': 'TI'
+    'Technology & IT': [
     'name': 'IT Systems Assistant',
     'name': 'IT Support Technician',
     'name': 'Junior Web Development',
     'name': 'Help Desk Assistant'
     ],
     
-        'Marketing & Sales': [
+    'careerCode': 'MS'
+    'fieldCode': 'MA'
+    'Marketing & Sales': [
     'name': 'Junior Marketing Coordinator',
     'name': 'Sales Associate',
     'name': 'Junior Content Creator',
@@ -29,7 +46,9 @@ var positionData = {
     'name': 'Member Marketing', 
     'name': 'Certificate Validator'
     ], 
-    
+
+    'careerCode': 'FA'
+    'fieldCode': 'FC'
     'Finance & Accounting': [
     'name': 'Finance Assistant',
     'name': 'Financial Analyst Trainee',
@@ -40,33 +59,97 @@ var positionData = {
     'name': 'Junior Tax Analyst',
     'name': 'Trainee Account Assistant'
     ], 
-    'Human Resources': ['HR Assistant', 'Junior Recruiter', 'Talent Acquisition Coordinator', 'HR Coordinator', 'Training Assistant'],
-    'Operations & Logistics': ['Operations Assistant', 'Junior Project Coordinator', 'Supply Chain Assistant', 'Logistics Coordinator', 'Procurement Assistant', 'Warehouse Associate'],
-    'Healthcare': ['Junior Medical Assistant', 'Healthcare Assistant', 'Pharmacy Technician', 'Junior Healthcare Administrator'], 
-    'Education': ['Teachers Assistant', 'Administrative Assistant', 'Admissions Assistant', 'Library Assistant', 'Curriculum Coordinator'],
-    'Creative & Design': ['Junior Graphic Designer', 'Creative Assistant', 'Junior Video Editor', 'Social Media Content Designer'],
-    'Customer Service': ['Customer Service Assistant', 'Call Center Representative', 'Junior Client Relations Specialist', 'Technical Support Assistant', 'Customer Success Coordinator', 'Junior Help Desk Support'],
-    'Engineering': ['Junior Mechanical Engineer', 'Junior Electrical Engineer', 'Engineering Technician', 'Junior Quality Assurance Engineer', 'Drafting Technician', 'Sheetmetal engineer', 'Artisan Assistant'],
-    'Administration': ['Administrative Assistant', 'Trainee Scanner', 'Trainee Admin Assistant', 'Trainee Marketing Assistant', 'Office Coordinator'],
 
+# Field.getFieldCodeAndCareer(fieldCode, careerCode)
 
-# Usage
+    'careerCode': 'HR'
+    'fieldCode': 'HS'
+    'Human Resources': [
+    'name': 'HR Assistant',
+    'name: 'Junior Recruiter',
+    'name': 'Talent Acquisition Coordinator', 
+    'name': 'HR Coordinator',
+    'name': 'Training Assistant'
+    ],
 
-//To get a certain career & it's field
+    'careerCode': 'OP'
+    'fieldCode': 'OL'
+    'Operations & Logistics': [
+    'name': 'Operations Assistant',
+    'name': 'Junior Project Coordinator',
+    'name': 'Supply Chain Assistant',
+    'name': 'Logistics Coordinator',
+    'name': 'Procurement Assistant',
+    "name': 'Warehouse Associate'
+    ],
 
-        $w('#dropdownCareer').options = .map(() => ({
-            label: career.name,
-            value: career.isoCode
-        }))
-        
-        $w('#dropdownField').options = .map(() => ({
-            label: .name,
-            value: isoCode
-        }))
+    'careerCode': 'HC'
+    'fieldCode': 'HL'
+    'Healthcare': [
+    'name': 'Junior Medical Assistant',
+    'name': 'Healthcare Assistant',
+    'name': 'Pharmacy Technician',
+    'name': 'Junior Healthcare Administrator'
+    ],
 
-export function dropdownCareer_change(event) {
-    const  = event.target.value;
-    ()
+# Field.getFieldCode(fieldcode)
 
-    $w('#dropdownField').value = undefined;
-}
+    'careerCode': 'EC'
+    'fieldCode': 'EU'
+    'Education': [
+    'name': 'Teachers Assistant',
+    'name': 'Administrative Assistant',
+    'name': 'Admissions Assistant',
+    'name': 'Library Assistant',
+    'name': 'Curriculum Coordinator'
+    ],
+
+    'careerCode': 'CD'
+    'fieldCode': 'CT'
+    'Creative & Design': [
+    'name': 'Junior Graphic Designer',
+    'name': 'Creative Assistant',
+    'name': 'Junior Video Editor',
+    'name': 'Social Media Content Designer'
+    ],
+
+# Career.getAllCareers
+
+    'careerCode': 'CS'
+    'fieldCode': 'CV'
+    'Customer Service': [
+    'name': 'Customer Service Assistant',
+    'name': 'Call Center Representative',
+    'name': 'Junior Client Relations Specialist',
+    'name': 'Technical Support Assistant',
+    'name': 'Customer Success Coordinator',
+    'name': 'Junior Help Desk Support'
+    ],
+
+# Field.getAllFields
+
+    'careerCode': 'EG'
+    'fieldCode': 'EN'
+    'Engineering': [
+    'name': 'Junior Mechanical Engineer',
+    'name': 'Junior Electrical Engineer',
+    'name': 'Engineering Technician',
+    'name': 'Junior Quality Assurance Engineer',
+    'name': 'Drafting Technician',
+    'name': 'Sheetmetal engineer',
+    'name': 'Artisan Assistant'
+    ],
+
+    'careerCode': 'AD'
+    'fieldCode': 'AM'
+    'Administration': [
+    'name': 'Administrative Assistant',
+    'name': 'Trainee Scanner',
+    'name': 'Trainee Admin Assistant',
+    'name': 'Trainee Marketing Assistant',
+    'name': 'Office Coordinator'
+    ],
+
+# Keywords
+
+Careers Fields 
